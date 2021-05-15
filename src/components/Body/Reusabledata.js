@@ -5,3 +5,4 @@ Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, an
 Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV without paying more.
 `,`Download your shows to watch offline.
 Save your favorites easily and always have something to watch.`]
+

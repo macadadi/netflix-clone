@@ -1,0 +1,23 @@
+
+.movielist{
+    height: 100vh;
+    
+}
+.movielist-movies{
+    background-color:transparent;
+    height: 250px;
+    width: 100%;
+    display: flex;
+    position: absolute;
+    bottom: 0px;
+}
+
+.single-movie{
+    background-color: blue;
+    height: 250px;
+}
+.single-movie > img{
+    height: 250px;
+    object-fit: contain;
+   
+}

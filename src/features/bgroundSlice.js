@@ -4,6 +4,7 @@ export const bgroundSlice = createSlice({
   name: 'bground',
   initialState: {
     value: 2,
+    user : 'mark'
   },
   reducers: {
     changebgimage: (state,action) => {

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './header.css'
 import {
     Navbar,
@@ -14,14 +14,14 @@ import { useSelector } from 'react-redux';
 function Header() {
   const src = photos
   const count = useSelector(state=>state.bground)
-   const [isOpen,setIsopen] = useState(false)
+  
 
  
     return (
         <div  style={{backgroundImage : `url(${src[count.value]})`}}>
          <Navbar className='navbarmain'  expand="md">
           <NavbarBrand href="/">
-          <img src='https://www.kenyabuzz.com/lifestyle/wp-content/uploads/2019/11/Netflix-logo-and-screen.jpg' style={{width:200, marginTop: -7}} />
+          <img src='https://www.kenyabuzz.com/lifestyle/wp-content/uploads/2019/11/Netflix-logo-and-screen.jpg' alt='No image' style={{width:200, marginTop: -7}} />
           </NavbarBrand>
           <div>
           <Nav >
