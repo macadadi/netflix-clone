@@ -20,7 +20,7 @@ function Header() {
     return (
         <div  style={{backgroundImage : `url(${src[count.value]})`}}>
          <Navbar className='navbarmain'  expand="md">
-          <NavbarBrand href="/">
+          <NavbarBrand href="/" className='navbar-brand'>
           <img src='https://www.kenyabuzz.com/lifestyle/wp-content/uploads/2019/11/Netflix-logo-and-screen.jpg' alt='No image' style={{width:200, marginTop: -7}} />
           </NavbarBrand>
           <div>

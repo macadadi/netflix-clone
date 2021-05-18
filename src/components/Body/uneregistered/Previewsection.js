@@ -17,7 +17,6 @@ function Previewsection({photo,msg,index}) {
 
     return (
         <div className="previewsection">
-            <h1 style={{color:'white'}}>{count.value}</h1>
     
      <Row className="preview-row">
       

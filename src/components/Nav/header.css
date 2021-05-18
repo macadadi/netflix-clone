@@ -2,6 +2,9 @@
     justify-content: space-between !important;
     background-color:transparent !important;
 }
+.navbar-brand > img{
+    width: 100px !important;
+}
 
 .navbanner{
     width: 70%;

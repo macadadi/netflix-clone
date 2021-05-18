@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
+import { Col, Row } from 'reactstrap'
 import Iframeview from './Iframeview'
 
 function Popup({handleClose,title,imgpath,votes,overview}) {
@@ -15,11 +16,13 @@ function Popup({handleClose,title,imgpath,votes,overview}) {
         <div className="box">
           {console.log('hey the key is',key)}
           <span className="close-icon" onClick={handleClose}>x</span>
-          {isWatch ? (<Iframeview  movieId={key}/>) :(<><div className='popup-one'> <div> <h3> {title}</h3>
+          {isWatch ? (<Iframeview  movieId={key}/>) :(<> <div className='popup-one'> <Row><Col  ><div> <h3> {title}</h3>
          <img src={imgpath} alt={title} />
          <h4>{votes} votes</h4>
          </div>
-        <div className='pop-overview'> <p>{overview}</p> </div></div></>) }
+         </Col>
+         <Col  >
+        <div className='pop-overview'> <p>{overview}</p> </div> </Col></Row></div></>) }
        
          <button className='pop-btn' onClick={handlewatch}>{isWatch ? (<h5>Cancel</h5>) : (<h5>Watch Trailer</h5>)}</button>
         </div>
