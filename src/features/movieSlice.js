@@ -11,6 +11,7 @@ export const fetchdata = createAsyncThunk(
     }
 )
 
+
 const initialState = {
     value : 4,
     status : '',
@@ -37,7 +38,7 @@ const movieSlice= createSlice({
      },
      [fetchdata.rejected] :(state,action)=>{
          state.status = 'rejected'
-     }
+     },
 
     }
 })

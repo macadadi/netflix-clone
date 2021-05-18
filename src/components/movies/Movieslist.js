@@ -30,7 +30,7 @@ function Movieslist() {
         <h2>Money heist</h2>
     <div className="movie-category">
        {console.log('maricus',movies.data[1]?.backdrop_path)}
-       {movies.status === 'pending' ? (<h1>Loading data please wait</h1>) : movies.status ==='fulfilled' ? (movies.data.map(show=> <Moviecategory overview={show.overview} votes={show.vote_average}  title={show.title} imgpath={`${imgpath}${show.backdrop_path}`}/>)) : (<h3>sorry</h3>)}
+       {movies.status === 'pending' ? (<h1>Loading data please wait</h1>) : movies.status ==='fulfilled' ? (movies.data.map((show,index)=> <Moviecategory key ={index} id={show.id}overview={show.overview} votes={show.vote_average}  title={show.title} imgpath={`${imgpath}${show.backdrop_path}`}/>)) : (<h3>sorry</h3>)}
        </div> 
     </div>
     <div> <h2>First and furious</h2>
