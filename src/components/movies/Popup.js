@@ -9,18 +9,19 @@ function Popup({handleClose,title,imgpath,votes,overview}) {
         setIswatch(!isWatch)
     }
 
-    const key = singleMovie?.show.videos.results[0].key
+    const key = singleMovie.show.videos?.results[0].key
     return (
         <div className="popup-box">
         <div className="box">
           {console.log('hey the key is',key)}
           <span className="close-icon" onClick={handleClose}>x</span>
-          {isWatch ? (<Iframeview  movieId={key}/>) :(<>  <h3> {title}</h3>
+          {isWatch ? (<Iframeview  movieId={key}/>) :(<><div className='popup-one'> <div> <h3> {title}</h3>
          <img src={imgpath} alt={title} />
          <h4>{votes} votes</h4>
-         <p>{overview}</p></>) }
+         </div>
+        <div className='pop-overview'> <p>{overview}</p> </div></div></>) }
        
-         <button onClick={handlewatch}>{isWatch ? (<h3>Cancel</h3>) : (<h3>Watch Trailer</h3>)}</button>
+         <button className='pop-btn' onClick={handlewatch}>{isWatch ? (<h5>Cancel</h5>) : (<h5>Watch Trailer</h5>)}</button>
         </div>
       
       </div>
