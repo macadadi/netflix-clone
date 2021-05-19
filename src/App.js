@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="app">
       <Router>
- {user.user ? (<Route exact path="/"  component={Mainbody}/>) :(<Route path="/" component={Movieslist} />)}
+ {!user.user ? (<Route exact path="/"  component={Mainbody}/>) :(<Route path="/" component={Movieslist} />)}
    
   
    
