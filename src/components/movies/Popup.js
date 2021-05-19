@@ -14,7 +14,6 @@ function Popup({handleClose,title,imgpath,votes,overview}) {
     return (
         <div className="popup-box">
         <div className="box">
-          {console.log('hey the key is',key)}
           <span className="close-icon" onClick={handleClose}>x</span>
           {isWatch ? (<Iframeview  movieId={key}/>) :(<> <div className='popup-one'> <Row><Col  ><div> <h3> {title}</h3>
          <img src={imgpath} alt={title} />

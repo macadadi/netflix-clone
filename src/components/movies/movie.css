@@ -5,7 +5,7 @@
 }
 
 .movie-banner{
-    background-color: red;
+    background-color:whitesmoke;
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
@@ -17,7 +17,7 @@
 }
 
 .movie-category-comp{
-    background-color: pink;
+    background-color: whitesmoke;
     height: 250px;
     margin-bottom: 10px;
     margin-left: 10px;
@@ -29,10 +29,19 @@
 }
 .movie-category-comp:hover{
     height: 270px;
-    width: 320px;
+    width: 400px;
 }
 .movie-category-comp img {
     height: 150px;
+    border-radius: 10px;
+    object-fit: contain;
+    align-items: center;
+    align-content: center;
+    transition: height 1s,width 1s,transform 2s;
+}
+
+.movie-category-comp img:hover{
+    height: 200px;
 }
 
 

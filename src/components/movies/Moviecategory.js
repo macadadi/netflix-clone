@@ -20,7 +20,6 @@ function Moviecategory({title,imgpath,votes,overview,id}) {
 
     return (
         <div className="movie-category-comp" >
-            {console.log('macadadi',id)}
 
           {isOpen && <Popup title={title} handleClose={togglePopup} votes={votes}  imgpath={imgpath} overview={overview}/>}
             <div     onClick={togglePopup} >
