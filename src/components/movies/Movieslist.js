@@ -33,15 +33,16 @@ function Movieslist() {
        </div> 
     </div>
     <div> <h2>First and furious</h2>
+  
     <div className="movie-category">
-       
         <Moviecategory category={'popular'} title={'money heist'} imgpath={'https://i.pinimg.com/originals/9b/bd/e6/9bbde64eb7775abcec204ded969647b6.jpg'}/>
         <Moviecategory category={'popular'} title={'money heist'} imgpath={'https://i.pinimg.com/originals/9b/bd/e6/9bbde64eb7775abcec204ded969647b6.jpg'}/>
         <Moviecategory category={'popular'} title={'money heist'} imgpath={'https://i.pinimg.com/originals/9b/bd/e6/9bbde64eb7775abcec204ded969647b6.jpg'}/>
         <Moviecategory category={'popular'} title={'money heist'} imgpath={'https://i.pinimg.com/originals/9b/bd/e6/9bbde64eb7775abcec204ded969647b6.jpg'}/>
         <Moviecategory category={'popular'} title={'money heist'} imgpath={'https://i.pinimg.com/originals/9b/bd/e6/9bbde64eb7775abcec204ded969647b6.jpg'}/>
-        <Moviecategory category={'popular'} title={'money heist'} imgpath={'https://i.pinimg.com/originals/9b/bd/e6/9bbde64eb7775abcec204ded969647b6.jpg'}/>
+        <Moviecategory category={'popular'} title={'money heist'} imgpath={'https://i.pinimg.com/originals/9b/bd/e6/9bbde64eb7775abcec204ded969647b6.jpg'}/>      
     </div> 
+ 
     </div>
     <div> <h2>No retreate</h2>
     <div className="movie-category">

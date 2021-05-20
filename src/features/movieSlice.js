@@ -6,10 +6,11 @@ const key = 'bb35e2dcecc02217bdac6dc948860a74'
 
 export const fetchdata = createAsyncThunk(
     'movies/fetchdata', async ()=>{
-        const req = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${key}&language=en-US&page=1`).catch(err=>console.log('an error occured',err))
+        const req = await fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=${key}&language=en-US&page=1`).catch(err=>console.log('an error occured',err))
         return req.json().then(res=>res.results)
     }
 )
+
 
 
 const initialState = {
