@@ -1,12 +1,12 @@
 .movielist{
-    background-color:whitesmoke;
+    background-color:transparent;
     padding-bottom: 10px;
     
 }
 
 .movie-banner{
     background-color:whitesmoke;
-    height: 100vh;
+    height: 90vh;
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -14,10 +14,11 @@
 .movie-category{
     display: flex;
     overflow-y: scroll;
+    height: 60vh;
 }
 
 .movie-category-comp{
-    background-color: whitesmoke;
+    background-color:transparent;
     height: 250px;
     margin-bottom: 10px;
     margin-left: 10px;
@@ -43,7 +44,28 @@
 .movie-category-comp img:hover{
     height: 200px;
 }
+/*select div*/
+.selec-div{
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
 
+}
+.selec-div > h2,select  {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+    padding: 0px 20px;
+    font-style: italic;
+}
+.selec-div > select{
+    margin: 10px 2%;
+    background-color: thistle;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
 
 
 /* Popup style */
@@ -89,8 +111,8 @@
     position: relative;
     width: 70%;
     margin: 0 auto;
-    height: 80%;
-    margin-top: calc(100vh - 85vh - 20px);
+    height: auto;
+    margin-top: calc(100vh - 85vh - 50px);
     background: #fff;
     border-radius: 4px;
     padding: 20px;

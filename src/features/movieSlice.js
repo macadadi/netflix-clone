@@ -5,8 +5,8 @@ import {  createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 const key = 'bb35e2dcecc02217bdac6dc948860a74'
 
 export const fetchdata = createAsyncThunk(
-    'movies/fetchdata', async ()=>{
-        const req = await fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=${key}&language=en-US&page=1`).catch(err=>console.log('an error occured',err))
+    'movies/fetchdata', async (Option)=>{
+        const req = await fetch(`https://api.themoviedb.org/3/movie/${Option}?api_key=${key}&language=en-US&page=1`).catch(err=>console.log('an error occured',err))
         return req.json().then(res=>res.results)
     }
 )
