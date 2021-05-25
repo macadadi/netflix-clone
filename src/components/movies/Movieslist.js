@@ -7,6 +7,8 @@ import Moviecategory from './Moviecategory'
 
 function Movieslist() {
     const dispatch = useDispatch()
+    const [keyword,setKeyword]=useState('')
+    let dry;
     const pk = useRef()
     const [randpic,setRantpic]=useState('https://static1.colliderimages.com/wordpress/wp-content/uploads/2020/11/best-movies-netflix-apr-2021.jpg')
     const [movieoption,setMovieoption] = useState('top_rated')
@@ -30,18 +32,22 @@ function Movieslist() {
       else{pk.current.scrollLeft -= 100;
        } 
     }
-    
+
+
+  const fk = movies.data.filter(g=>g.title.toLowerCase().includes(keyword.toLowerCase()))
+   
+  
 
     return (
 
         <div className="movielist" style={{backgroundImage : `url('${randpic}')`}} >
-             
+        {console.log('yeah fuck',fk)}
     <div className="movie-banner" >
     <div className ='selec-div'>
         <h1>{disptitle[movieoption]}</h1> 
         <div className='selec-div select-div-g'>
             <div className='g-input-div'>
-        <input type='text'  placeholder='Search'/></div>
+        <input type='text'  placeholder='Search' onChange={e=> setKeyword(e.target.value)}/></div>
         <select   onChange={e =>setMovieoption(e.target.value)}>
      <option selected value='top_rated'> Top Rated</option>
         <option value="popular">Popular</option>
@@ -58,7 +64,7 @@ function Movieslist() {
     
     <div ref={pk} className="movie-category" onWheel={handleweel}>
         
-       {movies.status === 'pending' ? (<h1>Loading data please wait</h1>) : movies.status ==='fulfilled' ? (movies.data?.map((show,index)=> <Moviecategory setRantpic={setRantpic} key ={index} id={show.id}overview={show.overview} votes={show.vote_average}  title={show.title} imgpath={`${imgpath}${show.backdrop_path}`}/>)) : (<h3>sorry</h3>)}
+       {movies.status === 'pending' ? (<h1>Loading data please wait</h1>) : movies.status ==='fulfilled' ? (fk.length > 0 ? (fk?.map((show,index)=> <Moviecategory setRantpic={setRantpic} key ={index} id={show.id}overview={show.overview} votes={show.vote_average}  title={show.title} imgpath={`${imgpath}${show.backdrop_path}`}/>)): <center> <h1 style={{color:'white',padding:'20px'}}>Sorry we could not find any Item matching   your search</h1></center> ): (<h3>sorry</h3>)}
       </div> 
     </div>
 

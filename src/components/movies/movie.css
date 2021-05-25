@@ -120,6 +120,7 @@ text-align: center;
     height: 100vh;
     top: 0;
     left: 0;
+    z-index: 1;
   }
   .popup-one{
       display: flex;
@@ -234,4 +235,17 @@ text-align: center;
     display: none;
     
     
+  }
+  .containerp {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+
+
+  .centeredd {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
