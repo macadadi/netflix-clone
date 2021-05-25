@@ -3,8 +3,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchsingleShow } from '../../features/singleshowSlice';
 import Popup from './Popup';
 
-function Moviecategory({title,imgpath,votes,overview,id}) {
+function Moviecategory({title,imgpath,votes,overview,id,setRantpic}) {
     const [isOpen, setIsOpen] = useState(false);
+    
     const dispatch = useDispatch()
     const [viewclick,setViewclick] = useState(false)
  
@@ -23,8 +24,11 @@ function Moviecategory({title,imgpath,votes,overview,id}) {
     const removeTitle =()=>{
       setViewclick(false)
     }
+   
     return (
-        <div className="movie-category-comp"  >
+      
+        <div className="movie-category-comp  wrapper" onMouseOver={()=>setRantpic(imgpath)} >
+        
 
           {isOpen && <Popup title={title} handleClose={togglePopup} votes={votes}  imgpath={imgpath} overview={overview}/>}
             <div     onClick={togglePopup}  onMouseOver={getTitle} onMouseLeave={removeTitle}>
@@ -35,6 +39,7 @@ function Moviecategory({title,imgpath,votes,overview,id}) {
         </div>
     )
 }
+
 
 export default Moviecategory
 
