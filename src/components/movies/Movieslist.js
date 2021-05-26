@@ -32,16 +32,24 @@ function Movieslist() {
       else{pk.current.scrollLeft -= 100;
        } 
     }
+    let fk;
+    
+try{
+     fk = movies.data.filter(g=>g.title.toLowerCase().includes(keyword.toLowerCase()))
+     console.log('error solved')
+}
+catch{
+  fk = movies.data
+  console.log('error occured 1 now')
+}
 
-
-  const fk = movies.data.filter(g=>g.title.toLowerCase().includes(keyword.toLowerCase()))
    
   
 
     return (
 
         <div className="movielist" style={{backgroundImage : `url('${randpic}')`}} >
-        {console.log('yeah fuck',fk)}
+    
     <div className="movie-banner" >
     <div className ='selec-div'>
         <h1>{disptitle[movieoption]}</h1> 
