@@ -15,12 +15,12 @@ function Popup({handleClose,title,imgpath,votes,overview}) {
         <div className="popup-box">
         <div className="box">
           <span className="close-icon" onClick={handleClose}>x</span>
-          {isWatch ? (<Iframeview  movieId={key}/>) :(<> <div className='popup-one'> <Row><Col  ><div> <h3> {title}</h3>
+          {isWatch ? (<Iframeview  movieId={key}/>) :(<> <div className='popup-one'> <Row><Col md="6"  ><div> <h3> {title}</h3>
          <img src={imgpath} alt={title} />
-         <h4>{votes} votes</h4>
+         <h5>{`${votes} votes`} </h5>
          </div>
          </Col>
-         <Col  >
+         <Col md="6"  >
         <div className='pop-overview'> <p>{overview}</p> </div> </Col></Row></div></>) }
        
          <button className='pop-btn' onClick={handlewatch}>{isWatch ? (<h5>Cancel</h5>) : (<h5>Watch Trailer</h5>)}</button>
