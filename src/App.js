@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import { Route,BrowserRouter as Router, } from 'react-router-dom';
+import { Route,BrowserRouter as Router, Redirect, } from 'react-router-dom';
 import './App.css';
 import Mainbody from './components/Body/Mainbody';
 import Movieslist from './components/movies/Movieslist';
@@ -14,7 +14,9 @@ function App() {
   return (
     <div className="app">
       <Router>
- {!user.user ? (<Route exact path="/"  component={Mainbody}/>) :(<Route path="/" component={Movieslist} />)}
+<Route exact path="/"  component={Mainbody}/>
+<Route path="/shows" component={Movieslist} />
+<Redirect from="*" to="/" />
    
   
    

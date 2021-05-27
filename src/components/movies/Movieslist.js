@@ -1,5 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import { Link } from 'react-router-dom'
+import { Col, Row } from 'reactstrap'
 import { fetchdata } from '../../features/movieSlice'
 import './movie.css'
 import Moviecategory from './Moviecategory'
@@ -52,17 +54,25 @@ catch{
     
     <div className="movie-banner" >
     <div className ='selec-div'>
-        <h1>{disptitle[movieoption]}</h1> 
+        <h2>{disptitle[movieoption]} <Link to='/' className="l-link" >Home</Link></h2> 
+       
         <div className='selec-div select-div-g'>
-            <div className='g-input-div'>
-        <input type='text'  placeholder='Search' onChange={e=> setKeyword(e.target.value)}/></div>
-        <select   onChange={e =>setMovieoption(e.target.value)}>
+           
+           <select   onChange={e =>setMovieoption(e.target.value)}>
      <option selected value='top_rated'> Top Rated</option>
         <option value="popular">Popular</option>
       <option value="upcoming">Upcoming</option>
 
     </select>
-    </div>
+    </div> 
+         {/*input div */}
+         <Row>
+    <div className='g-input-div'>
+        
+            <input type='text' className='g-input-input' placeholder='Search' onChange={e=> setKeyword(e.target.value)}/>
+         
+        </div>
+        </Row>
         </div>
     </div>
     
