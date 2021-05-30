@@ -1,14 +1,14 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `yarn start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 
+## prime show
+
+This is a simple react project to show 
+functional implementation of a section of 
+Popular entertainment sites like Netflix.\
+\
+The major functionalities includes Showing a
+collection of shows, single show details,
+Search functionality and an option to watch
+A trailer of the show.\
+
+View live [demo](https://primeshow-9de5f.web.app/).
