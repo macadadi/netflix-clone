@@ -78,7 +78,15 @@ text-align: center;
  margin-left: 2px;
  overflow: hidden;
  margin-right: 5px;
+
 }
+@media screen and (max-width: 600px) {
+    .g-input-input{
+        display: none;
+    }
+    
+}
+
 .selec-div > h2,select  {
     font-size: 18px;
     font-weight: bold;
