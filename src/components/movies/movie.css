@@ -51,11 +51,12 @@
     display: flex;
     justify-content: space-between;
     height: 50px;
+    
 
 }
-.select-div-g{
-   
-    width: 20%;
+.select-div-m{
+    margin: 1px;
+    overflow: hidden;
 }
 .g-input-div{
     margin-right: 5px;
@@ -78,21 +79,17 @@ text-align: center;
  margin-left: 2px;
  overflow: hidden;
  margin-right: 5px;
+ width: 150px;
 
 }
-@media screen and (max-width: 600px) {
-    .g-input-input{
-        display: none;
-    }
-    
-}
+
 
 .selec-div > h2,select  {
     font-size: 18px;
     font-weight: bold;
     text-align: center;
     margin-top: 10px;
-    padding: 0px 20px;
+    padding: 0px 5px;
     font-style: italic;
     
 }

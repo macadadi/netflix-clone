@@ -53,17 +53,17 @@ catch{
         <div className="movielist" style={{backgroundImage : `url('${randpic}')`}} >
     
     <div className="movie-banner" >
-    <div className ='selec-div'>
+    <div className ='selec-div select-div-m'>
         <h2>{disptitle[movieoption]} <Link to='/' className="l-link" >Home</Link></h2> 
        
-        <div className='selec-div select-div-g'>
+     <div className='selec-div select-div-g'>
            
            <select   onChange={e =>setMovieoption(e.target.value)}>
-     <option selected value='top_rated'> Top Rated</option>
-        <option value="popular">Popular</option>
-      <option value="upcoming">Upcoming</option>
+          <option selected value='top_rated'> Top Rated</option>
+         <option value="popular">Popular</option>
+          <option value="upcoming">Upcoming</option>
 
-    </select>
+         </select>
     </div> 
          {/*input div */}
          <Row>
